@@ -85,7 +85,7 @@ impl ChunkStorage {
         // store the data
         trace!("{:?}", LogMarker::StoringChunk);
         let _addr = self.db.write_chunk(data).await?;
-        trace!("{:?}", LogMarker::StoredNewChunk);
+        debug!("{:?}", LogMarker::StoredNewChunk);
 
         Ok(())
     }

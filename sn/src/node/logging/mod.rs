@@ -68,7 +68,7 @@ async fn log(system: &mut System, ctx: &LogCtx, print_resources_usage: bool) {
                 Process::map(proc_, processor_count)
             )
         } else {
-            trace!(
+            debug!(
                 "{}: Node resource usage: {:?}",
                 prefix,
                 Process::map(proc_, processor_count)
